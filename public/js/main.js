@@ -60,12 +60,30 @@ console.log(rc2(4,3));
 let capitalize = (a) => {
     return a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
 }
-console.log(capitalize("aJadjaIjdoaJDIAJ"));
+console.log(capitalize ("aJadjaIjdoaJDIAJ"));
 
 // ## EXO9
 // #### Créer une function [calcul] ayant 3 paramètres
 // #### nbr1 , operator , nbr2
 // #### Je dois pouvoir mettre un nombre choisir entre + - * ou / et un second nombre et obtenir une réponse (Utilisez un switch)
 
-let calcul = (nbr1,operator,nbr2) => {
-    
+let nbr1 = parseInt(prompt('nbr1'));
+let operator = prompt('operator?');
+let nbr2 = parseInt(prompt('nbr2'));
+
+let calcul = (a,b,c) => {
+    switch (b) {
+        case '*':
+            return a * c
+        case '+':
+            return a + c
+        case '-':
+            return a - c
+        case '/':
+            return a / c  
+        default:
+            alert('operateur invalide');
+            break;
+    }
+}
+console.log(calcul(nbr1,operator,nbr2));
